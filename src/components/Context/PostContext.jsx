@@ -65,6 +65,7 @@ function PostProvider({ children }) {
   }, []);
 
   function handleAddPost(post) {
+    axios.post("http://localhost:5000/posts", [post])
     setPosts((prevPosts) => [post, ...prevPosts]);
   }
 
